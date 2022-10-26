@@ -17,7 +17,7 @@ export function Card() {
                                         item.name.toLowerCase() +
                                         '.jpg'
                                     }
-                                    alt={`{item.name} {item.family}`}
+                                    alt={`${item.name}  ${item.family}`}
                                     className="character__picture card-img-top"
                                 />
                                 <div className="card-body">

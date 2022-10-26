@@ -11,7 +11,7 @@ export class King extends Character {
         kingdomYears: number
     ) {
         super(id, name, family, age);
-        this.id = id;
+
         this.kingdomYears = kingdomYears;
         this.message = 'Vais a morir todos.';
     }

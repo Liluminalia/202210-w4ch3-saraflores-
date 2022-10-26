@@ -32,13 +32,13 @@ export class Character implements IFullCharacter {
 
     static serie = 'Game of Thrones';
     constructor(id: number, name: string, family: string, age: number) {
+        this.id = id;
         this.name = name;
         this.family = family;
         this.age = age;
         this.lifeStatus = true;
         this.message = '';
         this.assessor = null;
-        this.id = id;
     }
     communicate() {
         return this.message;

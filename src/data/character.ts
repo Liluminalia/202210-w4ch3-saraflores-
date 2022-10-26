@@ -1,9 +1,8 @@
-import { Assessor } from './assessor.js';
-import { Fighter } from './fighter.js';
-import { King } from './king.js';
-import { Squire } from './squire.js';
+import { Assessor } from './assessor';
+import { Squire } from './squire';
 
 export interface ICharacter {
+    id: number;
     name: string;
     age: number;
     family: string;
@@ -11,6 +10,7 @@ export interface ICharacter {
     message: string;
 }
 export interface IFullCharacter {
+    id: number;
     name: string;
     age: number;
     family: string;
@@ -21,6 +21,7 @@ export interface IFullCharacter {
 }
 //interdace -> se parece mucho a una clase, son los tipos de valores de cada clase, solo se pueden usar para tipar o para implementar.nunca para instanciar
 export class Character implements IFullCharacter {
+    id: number;
     name: string;
     family: string;
     age: number;
@@ -30,13 +31,14 @@ export class Character implements IFullCharacter {
     squiring?: Squire | null;
 
     static serie = 'Game of Thrones';
-    constructor(name: string, family: string, age: number) {
+    constructor(id: number, name: string, family: string, age: number) {
         this.name = name;
         this.family = family;
         this.age = age;
         this.lifeStatus = true;
         this.message = '';
         this.assessor = null;
+        this.id = id;
     }
     communicate() {
         return this.message;

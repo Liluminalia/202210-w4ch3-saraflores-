@@ -4,12 +4,14 @@ export class King extends Character {
     kingdomYears: number;
 
     constructor(
+        id: number,
         name: string,
         family: string,
         age: number,
         kingdomYears: number
     ) {
-        super(name, family, age);
+        super(id, name, family, age);
+
         this.kingdomYears = kingdomYears;
         this.message = 'Vais a morir todos.';
     }

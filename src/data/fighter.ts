@@ -5,13 +5,15 @@ export class Fighter extends Character {
     skill: number;
 
     constructor(
+        id: number,
         name: string,
         family: string,
         age: number,
         weapons: string,
         skill: number
     ) {
-        super(name, family, age);
+        super(id, name, family, age);
+        this.id = id;
         this.weapons = weapons;
         this.skill = skill;
         this.message = 'Primero pego y luego pregunto.';
